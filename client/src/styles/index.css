@@ -2,16 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color1: #ffcdf5;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: rgb(255, 255, 255);
+  /* background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 243, 254) 100%); */
+  color: rgb(45, 45, 45);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.header {
+  background-color: var(--color1);
+  box-shadow: 0 0 0.5rem 0.005rem rgba(0, 0, 0, 0.5);
+}
+
+.listing_card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 15rem; */
+  width: 100%;
+  background-color: var(--color1);
+
+  box-shadow: 0 0 0.4rem 0.05rem rgba(0, 0, 0, 0.5);
+  /* color: aliceblue; */
+  border-radius: 0.5rem;
+  /* font-weight: 500; */
+  /* font-size: large; */
+}
+
+.listings_grid {
+  width: 100%;
+  /* border: 1px solid black; */
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
+  /* grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
+  grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  gap: 1rem;
 }

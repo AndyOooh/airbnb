@@ -11,10 +11,10 @@ const dbConnect = async (): Promise<void | undefined> => {
   try {
     await client.connect();
     const db: mongoDB.Db = client.db(DB_NAME);
-    const abbListsingsCollection: mongoDB.Collection = db.collection(AIRBNB_COLLECTION);
-    collections.abbListings = abbListsingsCollection;
+    const abbListingsCollection: mongoDB.Collection = db.collection(AIRBNB_COLLECTION);
+    collections.abbListings = abbListingsCollection;
     console.log(
-      `Connected to database: ${db.databaseName}, collection: ${abbListsingsCollection.collectionName}`,
+      `Connected to database: ${db.databaseName}, collection: ${abbListingsCollection.collectionName}`,
     );
   } catch (e) {
     console.error(e);

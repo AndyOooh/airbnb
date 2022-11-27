@@ -3,5 +3,6 @@
   "trailingComma": "all",
   "singleQuote": true,
   "printWidth": 100,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "no-unused-vars": "off"
 }
